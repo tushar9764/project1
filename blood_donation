@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+struct donor
+{
+	int sino;
+	char hospital[30];
+	char dname[30];
+	char darea[30];
+	char dBG[20];
+	int dMN;
+
+}donor[500];
+int main()
+{
+	int i,n;
+	printf("Enter number of donors \n:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf(" \n serial number: ");
+		scanf(" %d",&donor[i].sino);
+		printf(" \n hospital name: ");
+		scanf(" %s",&donor[i].hospital);
+		printf(" \n donor name: ");
+		scanf(" %s",&donor[i].dname);
+		printf(" \n area: ");
+		scanf(" %s",&donor[i].darea);
+		printf("\n blood group: ");
+		scanf(" %s",&donor[i].dBG);
+		printf(" \n mobile number: ");
+		scanf(" %d",&donor[i].dMN);
+
+
+	}
+
+	for(i=0;i<n;i++)
+	{
+		printf(" \n SI NO\t\t hospital\t\t dname\t\t darea\t\t dBG\t\t dMN\n\n");
+		printf(" %d",donor[i].sino);
+		printf(" \t %s",donor[i].hospital);
+		printf(" \t %s",donor[i].dname);
+		printf(" \t %s",donor[i].darea);
+		printf(" \t %s",donor[i].dBG);
+		printf(" \t %d",donor[i].dMN);
+	}
+    printf("Enter the blood group(i): \n");
+    scanf("%s",donor[i].dBG);
+	{
+	    for(i=0;i<n;i++)
+    {
+		if("dBG is A positive")
+		{
+		    printf("donor [i],this is your required donor\n");
+		    scanf("%s",&donor[i].dBG);
+		    break;
+		}
+		else
+            printf("this is not your required donor\n");
+            scanf("%s",&donor[i].dBG);
+    }
+    return 0
